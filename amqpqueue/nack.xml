@@ -18,10 +18,10 @@
     Mark the message identified by <parameter>delivery_tag</parameter> as explicitly not acknowledged. This method can only be called on messages that have not yet been acknowledged, meaning that messages retrieved with by <methodname>AMQPQueue::consume</methodname> and <methodname>AMQPQueue::get</methodname> and using the <constant>AMQP_AUTOACK</constant> flag are not eligible.
   </para>
   <para>
-    When called, the broker will immediately put the message back onto the queue, instead of waiting until the connection is closed.
+    When called, the broker will immediately drop the message identified by parameter <parameter>delivery_tag</parameter>, or send it back to the queue when called with <parameter>flag</parameter> <constant>AMQP_REQUEUE</constant>.
   </para>
   <para>
-   This method is only supported by the RabbitMQ broker. The behavior of calling this method while connected to any other broker is undefined.
+   When used with <parameter>flag</parameter> <constant>AMQP_MULTIPLE</constant>, this method will also reject all messages before the given <parameter>delivery_tag</parameter> that have not been acknowledged yet.
   </para>
  </refsect1>
 
@@ -40,7 +40,8 @@
     <term><parameter>flags</parameter></term>
     <listitem>
      <para>
-      A bitmask of flags.
+      A bitmask of any of the flags: <constant>AMQP_MULTIPLE</constant>,
+      <contant>AMQP_REQUEUE</contant>.
      </para>
     </listitem>
    </varlistentry>
