@@ -80,7 +80,7 @@ $channel = new AMQPChannel($connection);
 $queue = new AMQPQueue($channel);
 
 //declare the queue
-$queue->declare('myqueue');
+$queue->declareQueue('myqueue');
 
 //get the next message, but don't mark it as delivered
 $message = $queue->get(AMQP_NOPARAM);
@@ -108,7 +108,7 @@ $connection->connect();
 $queue = new AMQPQueue($connection);
 
 //declare the queue
-$queue->declare('myqueue');
+$queue->declareQueue('myqueue');
 
 $options = array(
     'min' => 1,
