@@ -125,6 +125,11 @@
            <entry></entry>
            <entry>NULL</entry>
           </row>
+          <row>
+           <entry><emphasis>headers</emphasis></entry>
+           <entry>Array of custom headers to add. Use the key <emphasis>CC</emphasis> to add an array of additional routing keys.</entry>
+           <entry>NULL</entry>
+          </row>
          </tbody>
         </tgroup>
        </table>
