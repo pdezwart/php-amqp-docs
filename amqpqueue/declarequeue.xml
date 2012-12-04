@@ -1,20 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 
-<refentry xml:id="amqpqueue.declare" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
+<refentry xml:id="amqpqueue.declarequeue" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <refnamediv>
-  <refname>AMQPQueue::declare</refname>
+  <refname>AMQPQueue::declareQueue</refname>
   <refpurpose>Declare a new queue</refpurpose>
  </refnamediv>
 
  <refsect1 role="description">
   &reftitle.description;
   <methodsynopsis>
-   <modifier>public</modifier> <type>int</type><methodname>AMQPQueue::declare</methodname>
+   <modifier>public</modifier>
+   <type>int</type><methodname>AMQPQueue::declareQueue</methodname>
    <void />
   </methodsynopsis>
   <para>
-   This is an alias for <methodname>AMQPQueue::declareQueue</methodname> for backward compatibility. Its use is discouraged since declare is a reserved word.
+    Declare a new queue on the broker.
   </para>
  </refsect1>
 
@@ -35,6 +36,7 @@
   <para>
    Throws <classname>AMQPQueueException</classname> if declaring the queue failed.
   </para>
+
  </refsect1>
 
  <refsect1 role="returnvalues">
