@@ -11,9 +11,10 @@
   &reftitle.description;
   <methodsynopsis>
    <modifier>public</modifier> <type>bool</type><methodname>AMQPExchange::bind</methodname>
-   <methodparam><type>string</type><parameter>destination_exchange_name</parameter></methodparam>
-   <methodparam><type>string</type><parameter>source_exchange_name</parameter></methodparam>
+   <methodparam><type>string</type><parameter>exchange_name</parameter></methodparam>
    <methodparam><type>string</type><parameter>routing_key</parameter></methodparam>
+   <methodparam
+    choice="opt"><type>integer</type><parameter>flags</parameter><initializer><constant>AMQP_NOPARAM</constant></initializer></methodparam>
   </methodsynopsis>
   <para>
    Bind an exchange to another exchange using the specified routing key.
@@ -25,18 +26,10 @@
   <para>
    <variablelist>
     <varlistentry>
-     <term><parameter>destination_exchange_name</parameter></term>
+     <term><parameter>exchange_name</parameter></term>
      <listitem>
       <para>
-       The name of the destination exchange in the binding.
-      </para>
-     </listitem>
-    </varlistentry>
-    <varlistentry>
-     <term><parameter>source_exchange_name</parameter></term>
-     <listitem>
-      <para>
-       The name of the source exchange in the binding.
+       The name of the exchange to bind to.
       </para>
      </listitem>
     </varlistentry>
@@ -45,6 +38,14 @@
      <listitem>
       <para>
        The routing key to use as a binding.
+      </para>
+     </listitem>
+    </varlistentry>
+    <varlistentry>
+     <term><parameter>flags</parameter></term>
+     <listitem>
+      <para>
+       flags to use for binding.
       </para>
      </listitem>
     </varlistentry>
