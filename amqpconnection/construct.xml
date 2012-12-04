@@ -65,6 +65,11 @@
           <entry>Password <note><simpara>Max 128 characters</simpara></note></entry>
           <entry><link linkend="ini.amqp.password">amqp.password</link></entry>
          </row>
+         <row>
+          <entry><emphasis>timeout</emphasis></entry>
+          <entry>Inactivity timout to use for this connection</entry>
+          <entry><link linkend="ini.amqp.timeout">amqp.timeout</link></entry>
+         </row>
         </tbody>
        </tgroup>
       </table>
