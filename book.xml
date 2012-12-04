@@ -23,6 +23,11 @@
   <para>
    We *HIGHLY* recommend you review the <link xlink:href="&url.amqp.amqp_0_9_1_reference;">AMQP specification reference, version 0-9-1</link>. This document will help explain a lot of the calls made available by this extension.
   </para>
+
+  <para>
+   Development of this extension has moved to <link xlink:href="https://github.com/pdezwart/php-amqp">https://github.com/pdezwart/php-amqp</link> on github.
+  </para>
+
  </preface>
  
  &reference.amqp.setup;
