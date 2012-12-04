@@ -12,7 +12,7 @@
   <methodsynopsis>
    <modifier>public</modifier> <type>bool</type><methodname>AMQPQueue::unbind</methodname>
    <methodparam><type>string</type><parameter>exchange_name</parameter></methodparam>
-   <methodparam><type>string</type><parameter>routing_key</parameter></methodparam>
+   <methodparam choice="opt"><type>string</type><parameter>routing_key</parameter></methodparam>
   </methodsynopsis>
   <para>
     Remove a routing key binding on an exchange from the given queue.
@@ -35,7 +35,7 @@
      <term><parameter>routing_key</parameter></term>
      <listitem>
       <para>
-       The binding routing key used by the queue.
+       The routing key used for the binding, if any.
       </para>
      </listitem>
     </varlistentry>

@@ -12,7 +12,7 @@
   <methodsynopsis>
    <modifier>public</modifier> <type>bool</type><methodname>AMQPQueue::bind</methodname>
    <methodparam><type>string</type><parameter>exchange_name</parameter></methodparam>
-   <methodparam><type>string</type><parameter>routing_key</parameter></methodparam>
+   <methodparam choice="opt"><type>string</type><parameter>routing_key</parameter></methodparam>
   </methodsynopsis>
   <para>
     The bind method will bind the given queue to the specified routing key on the given exchange.
