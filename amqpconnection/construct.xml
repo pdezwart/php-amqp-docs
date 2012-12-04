@@ -11,7 +11,7 @@
   &reftitle.description;
   <methodsynopsis>
    <modifier>public</modifier> <methodname>AMQPConnection::__construct</methodname>
-   <methodparam choice="opt"><type>array</type><parameter>credentials</parameter><initializer>array()</initializer></methodparam>
+   <methodparam choice="opt"><type>array</type><parameter>parameters</parameter><initializer>array()</initializer></methodparam>
   </methodsynopsis>
   <para>
    Creates an <classname>AMQPConnection</classname> instance representing a connection to an AMQP broker.
@@ -23,11 +23,11 @@
   <para>
    <variablelist>
     <varlistentry>
-     <term><parameter>credentials</parameter></term>
+     <term><parameter>parameters</parameter></term>
      <listitem>
       <para>
-       The <parameter>credentials</parameter> is an optional array of credential information for connecting to the AMQP
-       broker.
+       The <parameter>parameters</parameter> is an optional array of
+       attributes for connecting to the AMQP broker.
       </para>
       <table>
        <title>Supported indexes</title>
