@@ -168,6 +168,17 @@
       If set during a call to <methodname>AMQPExchange::bind</methodname>, the server will not respond to the method. The client should not wait for a reply method. If the server could not complete the method it will raise a channel or connection exception. 
      </simpara>
     </listitem>
+   </varlistentry>
+   <varlistentry xml:id="constant.amqp-requeue">
+    <term>
+     <constant>AMQP_REQUEUE</constant>
+     (<type>integer</type>)
+    </term>
+    <listitem>
+     <simpara>
+      If set during a call to <methodname>AMQPQueue::nack</methodname> or <methodname>AMQPQUEUE::reject</methodname>, the message will be sent back to the originating queue instead of being returned.
+     </simpara>
+    </listitem>
     </varlistentry>
     <varlistentry xml:id="constant.amqp-ex-type-direct">
     <term>
