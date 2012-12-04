@@ -28,7 +28,7 @@
  <refsect1 role="returnvalues">
   &reftitle.returnvalues;
   <para>
-      Returns true if connection was successfully closed, false otherwise.
+   Returns <type>true</type> if connection was successfully closed, <type>false</type> otherwise.
   </para>
  </refsect1>
 
