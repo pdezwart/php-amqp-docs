@@ -30,8 +30,17 @@ $ex->bind('queue1', 'routing.key');
 // Publish a message to the exchange with a routing key
 $ex->publish('message', 'routing.key');
 
+function processMessage(AMQPEnvelope $env, AMQPQueue $queue) {
+  printf(
+    "Received Message on Queue '%s': '%s'\n",
+    $queue->getName(),
+    $env->getBody()
+  );
+  return true;
+}
+
 // Read from the queue
-$msg = $q->consume();
+$q->consume('processMessage');
 
 ?>
 ]]>
