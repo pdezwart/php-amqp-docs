@@ -27,10 +27,6 @@
   <link xlink:href="&url.pecl.package;amqp">&url.pecl.package;amqp</link>.
  </para>
 
- <para>
-  Note to Windows users: This extension does not currently support Windows since the librabbitmq library does not yet support Windows.
- </para>
-
 </section>
 
 
