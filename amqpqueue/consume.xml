@@ -65,6 +65,10 @@
   <para>
    Throws <classname>AMQPConnectionException</classname> if the connection to the broker was lost.
   </para>
+  <para>
+   Throws <classname>AMQPQueueException</classname> if the channel is closed
+   unexpectedly.
+  </para>
  </refsect1>
 
  <refsect1 role="returnvalues">
