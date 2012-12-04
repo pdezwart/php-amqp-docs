@@ -70,7 +70,7 @@ $cnn->connect();
 
 /* Create a new exchange */
 $ex = new AMQPExchange($cnn);
-$ex->declare('new_topic_exchange', AMQP_EX_TYPE_DIRECT, AMQP_DURABLE | AMQP_AUTODELETE);
+$ex->declareExchange('new_topic_exchange', AMQP_EX_TYPE_DIRECT, AMQP_DURABLE | AMQP_AUTODELETE);
 
 /* Delete the previous exchange */
 $ex2 = new AMQPExchange($cnn);
