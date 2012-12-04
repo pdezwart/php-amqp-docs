@@ -224,6 +224,17 @@
      </simpara>
     </listitem>
    </varlistentry>
+   <varlistentry xml:id="constant.amqp-os-socket-timeout-errno">
+    <term>
+     <constant>AMQP_OS_SOCKET_TIMEOUT_ERRNO</constant>
+     (<type>integer</type>)
+    </term>
+    <listitem>
+     <simpara>
+      Error code returned in AMQPConnectionException when a timeout was encountered during consume.
+     </simpara>
+    </listitem>
+   </varlistentry>
   </variablelist>
  </para>
 </appendix>
