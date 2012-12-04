@@ -3,8 +3,8 @@
 
 <refentry xml:id="amqpenvelope.getexchangename" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <refnamediv>
-   <refpurpose>Get the message exchange</refpurpose>
   <refname>AMQPEnvelope::getExchangeName</refname>
+   <refpurpose>Get the name of the used message exchange</refpurpose>
   </refnamediv>
 
   <refsect1 role="description">
@@ -15,7 +15,7 @@
     <void />
    </methodsynopsis>
    <para>
-    Get the exchange name on which the message was published.
+    Get the name of the exchange this message was published on.
    </para>
 
  </refsect1>
@@ -28,7 +28,7 @@
  <refsect1 role="returnvalues">
   &reftitle.returnvalues;
   <para>
-    The exchange name on which the message was published.
+    The name of the exchange on which the message was published.
   </para>
  </refsect1>
 </refentry>
