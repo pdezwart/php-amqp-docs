@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ --> 
 
-<refentry xml:id="amqpenvelope.getexchange" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
+<refentry xml:id="amqpenvelope.getexchangename" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <refnamediv>
-  <refname>AMQPEnvelope::getExchange</refname>
    <refpurpose>Get the message exchange</refpurpose>
+  <refname>AMQPEnvelope::getExchangeName</refname>
   </refnamediv>
 
   <refsect1 role="description">
    &reftitle.description;
    <methodsynopsis>
-    <modifier>public</modifier> <type>string</type><methodname>AMQPEnvelope::getExchange</methodname>
+    <modifier>public</modifier>
+    <type>string</type><methodname>AMQPEnvelope::getExchangeName</methodname>
     <void />
    </methodsynopsis>
    <para>
