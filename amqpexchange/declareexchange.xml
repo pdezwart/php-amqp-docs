@@ -1,20 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 
-<refentry xml:id="amqpexchange.declare" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
+<refentry xml:id="amqpexchange.declareexchange" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <refnamediv>
-  <refname>AMQPExchange::declare</refname>
+  <refname>AMQPExchange::declareExchange</refname>
   <refpurpose>Declare a new exchange on the broker.</refpurpose>
  </refnamediv>
 
  <refsect1 role="description">
   &reftitle.description;
   <methodsynopsis>
-   <modifier>public</modifier> <type>int</type><methodname>AMQPExchange::declare</methodname>
+   <modifier>public</modifier>
+   <type>int</type><methodname>AMQPExchange::declareExchange</methodname>
    <void />
   </methodsynopsis>
   <para>
-   This is an alias for <methodname>AMQPExchange::declareExchange</methodname> for backward compatibility. Its use is discouraged since declare is a reserved word.
+   Declare a new exchange on the broker.
   </para>
  </refsect1>
 
@@ -43,6 +44,35 @@
    Throws <classname>AMQPConnectionException</classname> if the connection to the broker was lost.
   </para>
  </refsect1>
+
+ <refsect1 role="examples">
+  &reftitle.examples;
+  <para>
+   <example>
+    <title><methodname>AMQPExchange::declareExchange</methodname> example</title>
+    <programlisting role="php">
+<![CDATA[
+<?php
+
+/* Create a new connection */
+$cnn = new AMQPConnection();
+$cnn->connect();
+
+$ch = new AMQPChannel($cnn);
+
+$ex = new AMQPExchange($ch);
+$ex->setName('new_topic_exchange');
+$ex->setType(AMQP_EX_TYPE_DIRECT);
+$ex->setFlags(AMQP_DURABLE | AMQP_AUTODELETE);
+$ex->declareExchange();
+
+?>
+]]>
+    </programlisting>
+   </example>
+  </para>
+ </refsect1>
+
 
 </refentry>
 
