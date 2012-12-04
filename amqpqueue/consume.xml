@@ -13,6 +13,7 @@
    <modifier>public</modifier> <type>void</type><methodname>AMQPQueue::consume</methodname>
    <methodparam><type>callable</type><parameter>callback</parameter></methodparam>
    <methodparam choice="opt"><type>int</type><parameter>flags</parameter><initializer><constant>AMQP_NOPARAM</constant></initializer></methodparam>
+   <methodparam choice="opt"><type>string</type><parameter>consumerTag</parameter></methodparam>
   </methodsynopsis>
   <para>
    Blocking function that will retrieve the next message from the queue as it becomes available and will pass it off to the callback.
@@ -40,6 +41,15 @@
      <listitem>
       <para>
        A bitmask of any of the flags: <constant>AMQP_NOACK</constant>.
+      </para>
+     </listitem>
+    </varlistentry>
+    <varlistentry>
+     <term><parameter>consumerTag</parameter></term>
+     <listitem>
+      <para>
+        A string describing this consumer. Used for ending subscriptions
+        with <methodname>AMQPQueue::cancel</methodname>.
       </para>
      </listitem>
     </varlistentry>
