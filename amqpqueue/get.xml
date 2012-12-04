@@ -63,7 +63,7 @@
    $queue = new AMQPQueue($channel);
 
    //declare the queue
-   $queue->declare('myqueue');
+   $queue->declareQueue('myqueue');
 
    //get the messages
    $messages = $queue->get(AMQP_AUTOACK);
