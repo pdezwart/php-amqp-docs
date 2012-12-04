@@ -120,6 +120,11 @@
            <entry></entry>
            <entry>NULL</entry>
           </row>
+          <row>
+           <entry><emphasis>correlation_id</emphasis></entry>
+           <entry></entry>
+           <entry>NULL</entry>
+          </row>
          </tbody>
         </tgroup>
        </table>
