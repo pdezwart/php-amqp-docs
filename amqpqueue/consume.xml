@@ -40,7 +40,7 @@
      <term><parameter>flags</parameter></term>
      <listitem>
       <para>
-       A bitmask of any of the flags: <constant>AMQP_NOACK</constant>.
+       A bitmask of any of the flags: <constant>AMQP_AUTOACK</constant>.
       </para>
      </listitem>
     </varlistentry>
